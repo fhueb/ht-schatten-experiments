@@ -1,0 +1,28 @@
+project_name: "Schatten Muon"
+
+training:
+  dataset_name: "HuggingFaceFW/fineweb-edu"
+  dataset_config_name: "sample-10BT"
+  dataset_revision: "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9"
+  config_name: "EleutherAI/pythia-70m"
+  config_revision: "a39f36b100fe8a5377810d56c3f4789b9c53ac42"
+  tokenizer_name: "EleutherAI/pythia-70m"
+  tokenizer_revision: "a39f36b100fe8a5377810d56c3f4789b9c53ac42"
+  num_train_epochs: 1
+  block_size: 2048
+  per_device_train_batch_size: 32
+  per_device_eval_batch_size: 16
+  gradient_accumulation_steps: 8
+  proportion_of_dataset: 0.14
+  learning_rate: 0.0075
+  schatten_r: "inf"
+  optimizer: "Muon"
+  momentum: 0.95
+  beta2: 0.95
+  weight_decay: 0.1
+  warmup_ratio: 0.05
+  cooldown_proportion: 0.2
+  lr_scheduler_type: "warmup_stable_decay"
+  save_initialization: true
+  mixed_precision: "bf16"
+  seed: 0

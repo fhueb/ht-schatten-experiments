@@ -1,0 +1,29 @@
+project_name: "Schatten Noise Ratios"
+
+data:
+  dataset_name: "HuggingFaceFW/fineweb-edu"
+  dataset_config_name: "sample-10BT"
+  tokenizer_name: "EleutherAI/pythia-70m"
+  block_size: 2048
+  per_device_batch_size: 32
+  gradient_accumulation_steps: 8
+  proportion_of_dataset: 0.14
+  validation_split_percentage: 5
+  seed: 0
+
+examiner:
+  checkpoints: ["initialization", "final"]
+  norm_ps: [1, 2]
+  with_schatten: true
+  save_full_grad: true
+  mixed_precision: "bf16"
+
+plots:
+  ratio_snapshot_checkpoints: ["initialization", "final"]
+  ratio_snapshot_r: 1.5
+  include_embeddings: true
+  hide_x_labels: true
+  label_map:
+    embedding: "embd"
+    attention.qkv: "att.qkv"
+    attention.out: "att.out"
