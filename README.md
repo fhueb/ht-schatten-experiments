@@ -45,6 +45,13 @@ The plotter writes the normalized entrywise and Schatten noise-ratio snapshots u
 
 ## Citation
 
-If you use this code, please cite the accompanying paper.
+If you use this code, please cite the accompanying paper:
 
-BibTeX will be added once the arXiv identifier is assigned.
+~~~bibtex
+@article{FreeHTLunch2026huebler,
+  title={Free Heavy-Tailed Lunch for Muon: A Theoretical Justification of Empirical Success},
+  author={H{\"u}bler, Florian and Pethick, Thomas and Sra, Suvrit},
+  journal={arXiv preprint arXiv:2606.14560},
+  year={2026}
+}
+~~~
